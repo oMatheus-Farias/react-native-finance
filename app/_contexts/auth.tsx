@@ -17,6 +17,7 @@ interface UserData {
 
 interface AuthContextData {
   user: UserData | null;
+  signed: boolean;
   loading: boolean;
   setUser: (user: UserData) => void;
   signUp: (signUpUser: SignUpUserData) => Promise<void>;
@@ -54,7 +55,9 @@ const AuthProvider = ({ children }: PropsWithChildren) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, setUser, signUp }}>
+    <AuthContext.Provider
+      value={{ user, signed: !!user, loading, setUser, signUp }}
+    >
       {children}
     </AuthContext.Provider>
   );

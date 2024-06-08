@@ -12,6 +12,7 @@ const Layout = () => {
             name="(login)/index"
             options={{ title: "Login", headerShown: false }}
           />
+
           <Stack.Screen
             name="register/index"
             options={{
@@ -23,6 +24,8 @@ const Layout = () => {
               headerBackTitleVisible: false,
             }}
           />
+
+          <Stack.Screen name="(drawer)/home" options={{ headerShown: false }} />
         </Stack>
       </AuthProvider>
       <StatusBar backgroundColor="#f0f4ff" />

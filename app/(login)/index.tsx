@@ -33,7 +33,10 @@ const LoginPage = () => {
           <Input placeholder="Sua senha" />
         </AreaInput>
 
-        <SubmitButton activeOpacity={0.8}>
+        <SubmitButton
+          activeOpacity={0.8}
+          onPress={() => navigation.navigate("(drawer)/home" as never)}
+        >
           <SubmitText>Acessar</SubmitText>
         </SubmitButton>
 
