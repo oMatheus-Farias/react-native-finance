@@ -17,13 +17,13 @@ const LoginPage = () => {
   const navigation = useNavigation();
 
   const handleNavigateRegisterPress = () => {
-    navigation.navigate("register/index" as never);
+    navigation.navigate("(stack)/register/index" as never);
   };
 
   return (
     <Background>
       <Container behavior={Platform.OS === "ios" ? "padding" : undefined}>
-        <Logo source={require("../../assets/images/Logo.png")} alt="Logo" />
+        <Logo source={require("../../../assets/images/Logo.png")} alt="Logo" />
 
         <AreaInput>
           <Input placeholder="Seu e-mail" />
@@ -35,7 +35,7 @@ const LoginPage = () => {
 
         <SubmitButton
           activeOpacity={0.8}
-          onPress={() => navigation.navigate("(drawer)/home" as never)}
+          onPress={() => navigation.navigate("(drawer)" as never)}
         >
           <SubmitText>Acessar</SubmitText>
         </SubmitButton>

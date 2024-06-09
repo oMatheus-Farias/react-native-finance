@@ -14,6 +14,14 @@ const Layout = () => {
               title: "Home",
             }}
           />
+
+          <Drawer.Screen
+            name="profile/index"
+            options={{
+              drawerLabel: "Tela de Perfil",
+              title: "Profile",
+            }}
+          />
         </Drawer>
       </AuthProvider>
     </GestureHandlerRootView>

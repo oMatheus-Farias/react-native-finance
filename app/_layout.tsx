@@ -9,12 +9,12 @@ const Layout = () => {
       <AuthProvider>
         <Stack>
           <Stack.Screen
-            name="(login)/index"
+            name="(stack)/(login)/index"
             options={{ title: "Login", headerShown: false }}
           />
 
           <Stack.Screen
-            name="register/index"
+            name="(stack)/register/index"
             options={{
               title: "Voltar",
               headerStyle: {
@@ -25,7 +25,7 @@ const Layout = () => {
             }}
           />
 
-          <Stack.Screen name="(drawer)/home" options={{ headerShown: false }} />
+          <Stack.Screen name="(drawer)" options={{ headerShown: false }} />
         </Stack>
       </AuthProvider>
       <StatusBar backgroundColor="#f0f4ff" />

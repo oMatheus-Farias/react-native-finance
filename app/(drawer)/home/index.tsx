@@ -10,7 +10,7 @@ const HomePage = () => {
 
   useEffect(() => {
     if (!signed) {
-      navigation.navigate("(login)/index" as never);
+      navigation.navigate("(stack)/(login)/index" as never);
     }
   }, []);
 

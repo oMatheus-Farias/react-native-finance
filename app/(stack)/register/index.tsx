@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { ActivityIndicator } from "react-native";
-import { AuthContext } from "../_contexts/auth";
+import { AuthContext } from "../../_contexts/auth";
 import { Platform } from "react-native";
 
 import {
@@ -37,7 +37,7 @@ const RegisterPage = () => {
   return (
     <Background>
       <Container behavior={Platform.OS === "ios" ? "padding" : undefined}>
-        <Logo source={require("../../assets/images/Logo.png")} alt="Logo" />
+        <Logo source={require("../../../assets/images/Logo.png")} alt="Logo" />
 
         <AreaInput>
           <Input
