@@ -1,18 +1,15 @@
 import { AuthContext } from "@/app/_contexts/auth";
 import { useNavigation } from "expo-router";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { View, Text } from "react-native";
 
 const HomePage = () => {
-  const { signed } = useContext(AuthContext);
+  const { signed, user } = useContext(AuthContext);
 
   const navigation = useNavigation();
 
-  useEffect(() => {
-    if (!signed) {
-      navigation.navigate("(stack)/(login)/index" as never);
-    }
-  }, []);
+  console.log("Signed", signed);
+  console.log("User", user);
 
   return (
     <View>
